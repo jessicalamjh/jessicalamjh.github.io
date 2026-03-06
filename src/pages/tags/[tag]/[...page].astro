@@ -15,6 +15,7 @@ export const getStaticPaths = (async ({ paginate }) => {
 
 	return uniqueTags.flatMap((tag) => {
 		const postsWithTag = sortedPosts.filter((post) => post.data.tags.includes(tag));
+		if (postsWithTag.length === 0) return [];
 		return paginate(postsWithTag, {
 			pageSize: 10,
 			params: { tag },
