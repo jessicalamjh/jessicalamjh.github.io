@@ -98,5 +98,7 @@ import { menuLinks } from "@/site.config";
 		}
 	}
 
-	customElements.define("mobile-button", MobileNavBtn);
+	if (!customElements.get("mobile-button")) {
+		customElements.define("mobile-button", MobileNavBtn);
+	}
 </script>
