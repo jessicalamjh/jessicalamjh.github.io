@@ -4,20 +4,10 @@ import { menuLinks } from "@/site.config";
 ---
 
 <footer
-	class="mt-auto flex w-full flex-col items-center justify-center gap-y-2 pt-20 pb-4 text-center align-top font-semibold text-gray-600 sm:flex-row sm:justify-between sm:text-xs dark:text-gray-400"
+	class="text-global-text mt-auto flex w-full flex-col items-end justify-center gap-y-2 pt-20 pb-4 text-center align-top font-semibold sm:flex-row sm:justify-end sm:text-xs"
 >
-	<nav
-		aria-labelledby="footer_links"
-		class="flex gap-x-2 sm:gap-x-0 sm:divide-x sm:divide-gray-500"
-	>
-		<p id="footer_links" class="sr-only">More on this site</p>
-		{
-			menuLinks.map((link) => (
-				<a class="hover:text-global-text px-4 py-2 hover:underline sm:py-0" href={link.path}>
-					{link.title}
-				</a>
-			))
-		}
-	</nav>
-	<SocialList />
+	<div class="flex flex-wrap items-center justify-end gap-x-2 gap-y-1 self-end sm:justify-end">
+		<span>Find me on</span>
+		<SocialList />
+	</div>
 </footer>
